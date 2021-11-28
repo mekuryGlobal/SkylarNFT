@@ -1,0 +1,31 @@
+"yarn add  openzeppelin/contracts"
+
+"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.3/contracts/cryptography/ECDSA.sol"
+
+"https://github.com/OpenZeppelin//contracts/token/ERC721/extensions/ERC721Storage.sol"
+
+// npx hardhat deploy --network rinkeby
+
+const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL || process.env.ALCHEMY_MAINNET_RPC_URL || "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL || "https://eth-rinkeby.alchemyapi.io/v2/Jljh_toInMJX6xseH8wbYpiPeOxTsD_r"
+const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL || "https://eth-kovan.alchemyapi.io/v2/your-api-key"
+const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || "https://polygon-mumbai.alchemyapi.io/v2/your-api-key"
+const POLYGON_MAINNET_RPC_URL = process.env.POLYGON_MAINNET_RPC_URL || "https://polygon-mainnet.alchemyapi.io/v2/your-api-key"
+const MNEMONIC = process.env.MNEMONIC || "71d28503b282cb610b9d1714f86cc01e802999c8e81411f6f9fa7ca2c2f8afb9"
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "Your etherscan API key"
+
+
+
+
+import { NFTStorage, File } from 'nft.storage'
+
+const apiKey = 'YOUR_API_KEY'
+const client = new NFTStorage({ token: apiKey })
+
+const metadata = await client.store({
+  name: 'Pinpie',
+  description: 'Pin is not delicious beef!',
+  image: new File([/* data */], 'pinpie.jpg', { type: 'image/jpg' })
+})
+console.log(metadata.url)
+// ipfs://bafyreib4pff766vhpbxbhjbqqnsh5emeznvujayjj4z2iu533cprgbz23m/metadata.json
