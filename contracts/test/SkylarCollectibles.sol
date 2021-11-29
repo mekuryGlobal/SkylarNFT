@@ -13,13 +13,13 @@ address public LinkToken;
 
 struct Collectible
 {
-    int256 alchemistJournal;
-    uint256 magnifier;
-    uint256 bacterium;
-    uint256 alcohol;
-    uint256 goldenPen;
-    uint256 secondChance;
-    uint256 badge;
+    int256 problemSolving;
+    uint256 conceptualization;
+    uint256 creativity;
+    uint256 criticaThinking;
+    uint256 empathy;
+    uint256 flexibility;
+    uint256 grit;
 
     string name;
     
