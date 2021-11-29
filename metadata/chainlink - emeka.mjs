@@ -2,9 +2,9 @@ import fs from 'fs'
 import {file} from 'nft-storage'
 
 const alchemistJournal = {
-    name: "chainlink emeka",
+    name: "Onyebuchi",
     description: "rare books that gives tips on the current mission",
-    image: new file([await fs.promises.readfile('/Users/PatMekury/Documents/SkylarNFT/images/chainlink_alchemistJournal')], 'chainlink_alchemistJournal',
+    image: new file([await fs.promises.readfile('/Users/PatMekury/Documents/SkylarNFT/images/Onyebuchi')], 'Onyebuchi',
         {type:' image/png'}
    ),
 
@@ -20,4 +20,4 @@ const alchemistJournal = {
 
 };
 
-export default emeka;
+export default Onyebuchi;
