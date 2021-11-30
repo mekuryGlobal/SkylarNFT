@@ -1,7 +1,7 @@
 import fs from 'fs'
 import {file} from 'nft-storage'
 
-const alchemistJournal = {
+const Onyebuchi = {
     name: "Onyebuchi",
     description: "rare books that gives tips on the current mission",
     image: new file([await fs.promises.readfile('/Users/PatMekury/Documents/SkylarNFT/images/Onyebuchi')], 'Onyebuchi',
